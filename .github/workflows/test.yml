@@ -18,3 +18,5 @@ jobs:
         run: env | sort
       - name: Get secret
         run: echo "${{ secrets.SECRET }}"
+      - name: Get value
+        run: echo "${{ vars.PUBLIC }}"
