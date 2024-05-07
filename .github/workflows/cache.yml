@@ -16,11 +16,11 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
+      - run: npm ci
+
       - name: List the state of node modules
         continue-on-error: true
         run: npm list
-      
-      - run: npm ci
 
       # - name: Cache node modules
       #   id: cache-npm
