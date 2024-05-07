@@ -9,7 +9,12 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: ${{ github.ref_name }}
     steps:
       - uses: actions/checkout@v2
       - name: Deploy to production
         run: echo "happy!"
+      - name: Get env
+        run: env | sort
+      - name: Get secret
+        run: echo "${{ secrets.SECRET }}"
