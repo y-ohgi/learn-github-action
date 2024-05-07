@@ -17,6 +17,4 @@ jobs:
       - name: Get env
         run: env | sort
       - name: Get secret
-        env: 
-          SECRET: ${{ secrets.SECRET }}
-        run: echo "$SECRET"
+        run: echo "${{ secrets.SECRET }}"
