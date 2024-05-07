@@ -17,4 +17,4 @@ jobs:
       - name: Get env
         run: env | sort
       - name: Get secret
-        run: echo ${{ secret.SECRET }}
+        run: echo ${{ github.ref_name }} # ${{ secret.SECRET }}
