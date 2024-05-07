@@ -1,20 +1,19 @@
-name: test
+# name: test
 
-on:
-  push:
-    branches:
-      - main
-      - develop
+# on:
+#   push:
+#     branches:
+#       - main
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    environment: ${{ github.ref_name }}
-    steps:
-      - uses: actions/checkout@v2
-      - name: Deploy to production
-        run: echo "happy!"
-      - name: Get env
-        run: env | sort
-      - name: Get secret
-        run: echo "${{ secrets.SECRET }}"
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     environment: ${{ github.ref_name }}
+#     steps:
+#       - uses: actions/checkout@v2
+#       - name: Deploy to production
+#         run: echo "happy!"
+#       - name: Get env
+#         run: env | sort
+#       - name: Get secret
+#         run: echo "${{ secrets.SECRET }}"
