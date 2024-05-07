@@ -13,3 +13,5 @@ jobs:
       - uses: actions/checkout@v2
       - name: Deploy to production
         run: echo "happy!"
+      - name: Get env
+        run: env | sort
